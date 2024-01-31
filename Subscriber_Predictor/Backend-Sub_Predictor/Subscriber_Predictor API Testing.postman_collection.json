@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "529da17e-17bc-474d-aed4-523f6cdc0b5a",
+		"name": "Subscriber_Predictor API Testing",
+		"description": "This Collection will be used to test API endpoints for my YouTube Subscriber Predictor model's Restful API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29100923"
+	},
+	"item": [
+		{
+			"name": "Predictor_Test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"num_video views\": 10000000,\r\n    \"num_uploads\": 47,\r\n    \"num_video_views_rank\": 6271,\r\n    \"num_country_rank\": 3,\r\n    \"num_channel_type_rank\": 700,\r\n    \"num_video_views_for_the_last_30_days\": 100,\r\n    \"num_lowest_monthly_earnings\": 782.1,\r\n    \"num_highest_monthly_earnings\": 9000.9,\r\n    \"num_lowest_yearly_earnings\": 800,\r\n    \"num_highest_yearly_earnings\": 10000,\r\n    \"num_subscribers_for_last_30_days\": 600001,\r\n    \"num_created_year\": 2019,\r\n    \"num_Gross tertiary education enrollment (%)\": 29,\r\n    \"num_Population\": 5000000,\r\n    \"num_Unemployment rate\": 7.12,\r\n    \"num_Urban_population\": 374000000,\r\n    \"cat_category_Autos & Vehicles\": 1,\r\n    \"cat_category_Comedy\": 0,\r\n    \"cat_category_Education\": 0,\r\n    \"cat_category_Entertainment\": 0,\r\n    \"cat_category_Film & Animation\": 0,\r\n    \"cat_category_Gaming\": 0,\r\n    \"cat_category_Howto & Style\": 0,\r\n    \"cat_category_Movies\": 0,\r\n    \"cat_category_Music\": 0,\r\n    \"cat_category_News & Politics\": 0,\r\n    \"cat_category_Nonprofits & Activism\": 0,\r\n    \"cat_category_People & Blogs\": 0,\r\n    \"cat_category_Pets & Animals\": 0,\r\n    \"cat_category_Science & Technology\": 0,\r\n    \"cat_category_Shows\": 0,\r\n    \"cat_category_Sports\": 0,\r\n    \"cat_category_Trailer\": 0,\r\n    \"cat_category_Travel & Events\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.2.0.2:5000/getPredictionOutput",
+					"protocol": "http",
+					"host": [
+						"10",
+						"2",
+						"0",
+						"2"
+					],
+					"port": "5000",
+					"path": [
+						"getPredictionOutput"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "EX",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"num_video views\": 10000000,\r\n    \"num_uploads\": 47,\r\n    \"num_video_views_rank\": 6271,\r\n    \"num_country_rank\": 3,\r\n    \"num_channel_type_rank\": 700,\r\n    \"num_video_views_for_the_last_30_days\": 100,\r\n    \"num_lowest_monthly_earnings\": 782.1,\r\n    \"num_highest_monthly_earnings\": 9000.9,\r\n    \"num_lowest_yearly_earnings\": 800,\r\n    \"num_highest_yearly_earnings\": 10000,\r\n    \"num_subscribers_for_last_30_days\": 600001,\r\n    \"num_created_year\": 2019,\r\n    \"num_Gross tertiary education enrollment (%)\": 29,\r\n    \"num_Population\": 5000000,\r\n    \"num_Unemployment rate\": 7.12,\r\n    \"num_Urban_population\": 374000000,\r\n    \"cat_category_Autos & Vehicles\": 1,\r\n    \"cat_category_Comedy\": 0,\r\n    \"cat_category_Education\": 0,\r\n    \"cat_category_Entertainment\": 0,\r\n    \"cat_category_Film & Animation\": 0,\r\n    \"cat_category_Gaming\": 0,\r\n    \"cat_category_Howto & Style\": 0,\r\n    \"cat_category_Movies\": 0,\r\n    \"cat_category_Music\": 0,\r\n    \"cat_category_News & Politics\": 0,\r\n    \"cat_category_Nonprofits & Activism\": 0,\r\n    \"cat_category_People & Blogs\": 0,\r\n    \"cat_category_Pets & Animals\": 0,\r\n    \"cat_category_Science & Technology\": 0,\r\n    \"cat_category_Shows\": 0,\r\n    \"cat_category_Sports\": 0,\r\n    \"cat_category_Trailer\": 0,\r\n    \"cat_category_Travel & Events\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://10.2.0.2:5000/getPredictionOutput",
+							"protocol": "http",
+							"host": [
+								"10",
+								"2",
+								"0",
+								"2"
+							],
+							"port": "5000",
+							"path": [
+								"getPredictionOutput"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.1 Python/3.11.4"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Jan 2024 06:48:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"prediction\": 912396598.3210268\n}"
+				}
+			]
+		}
+	]
+}
