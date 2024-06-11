@@ -28,5 +28,33 @@ with tarfile.open(tar_path, 'r:gz') as tar:
 # We then combine all files to be used together
 combined_content = content_1 + "\n" + content_2 + "\n" + content_3 + "\n" + content_4 + "\n" + content_5 + "\n" + content_6 + "\n" + content_7 + "\n" + content_8 + "\n" + content_9
 
+# Find all users that have the same education degree
+split_data = combined_content.split()
+
+user_education = {}
+user_degree = {}
+
+# while i < len(split_data):
+#     if i == 'education;concentration;id;anonymized':
+#         print(i)
+
+# Create mapping of all users that have education concentration in their user profiles
+for i in range(0, len(split_data)):
+    if split_data[i] == 'education;concentration;id;anonymized':
+        user_education[i-1] = split_data[i+1] + split_data[i+2]
+        print(user_education)
+        
+# # Create mapping for all users that have education degree in their user profiles
+for i in range(0, len(split_data)):
+    if split_data[i] == 'education;degree;id;anonymized':
+        user_education[i-1] = split_data[i+1] + split_data[i+2]
+        print(user_education)
+        
+        
+
+# for category in split_data:
+#     if category == 'education;concentration;id;anonymized':
+#         test = 0
+
 # Print the combined content
-print(combined_content)
+# print(combined_content.split())
